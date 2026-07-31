@@ -1,174 +1,29 @@
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-}
+#aisha{
 
+width:250px;
 
-body{
+height:250px;
 
-background:#05070f;
+object-fit:cover;
 
-font-family:Tahoma;
+border-radius:50%;
 
-height:100vh;
+margin-top:30px;
 
-display:flex;
+box-shadow:0 0 30px pink;
 
-justify-content:center;
-
-align-items:center;
-
-overflow:hidden;
-
-color:white;
+animation:photo 2s;
 
 }
 
 
-.container{
-
-text-align:center;
-
-width:90%;
-
-max-width:700px;
-
-}
-
-
-#title{
-
-font-size:35px;
-
-color:#00ffe5;
-
-text-shadow:0 0 20px cyan;
-
-margin-bottom:40px;
-
-}
-
-
-#typing{
-
-font-size:24px;
-
-height:50px;
-
-}
-
-
-.loader{
-
-width:100%;
-
-height:18px;
-
-background:#222;
-
-border-radius:20px;
-
-overflow:hidden;
-
-}
-
-
-.progress{
-
-width:0%;
-
-height:100%;
-
-background:linear-gradient(to right,#00fff7,#00ff6a);
-
-}
-
-
-#stars{
-
-position:fixed;
-
-width:100%;
-
-height:100%;
-
-background-image:radial-gradient(white 1px,transparent 1px);
-
-background-size:40px 40px;
-
-opacity:.2;
-
-animation:move 25s linear infinite;
-
-}
-
-
-#surprise{
-
-display:none;
-
-animation:fade 2s;
-
-}
-
-
-#surprise h2{
-
-font-size:40px;
-
-color:#ff4da6;
-
-text-shadow:0 0 20px pink;
-
-}
-
-
-#message{
-
-margin-top:40px;
-
-font-size:28px;
-
-line-height:2;
-
-color:white;
-
-}
-
-
-
-.shake{
-
-animation:shake .5s;
-
-}
-
-
-
-@keyframes shake{
-
-0%{transform:translateX(0)}
-
-25%{transform:translateX(-15px)}
-
-50%{transform:translateX(15px)}
-
-75%{transform:translateX(-10px)}
-
-100%{transform:translateX(0)}
-
-}
-
-
-
-@keyframes fade{
+@keyframes photo{
 
 from{
 
 opacity:0;
 
-transform:scale(.5);
+transform:scale(0.3) rotate(180deg);
 
 }
 
@@ -176,24 +31,7 @@ to{
 
 opacity:1;
 
-transform:scale(1);
-
-}
-
-}
-
-
-@keyframes move{
-
-from{
-
-transform:translateY(0);
-
-}
-
-to{
-
-transform:translateY(300px);
+transform:scale(1) rotate(0deg);
 
 }
 
