@@ -21,6 +21,7 @@ const typing=document.getElementById("typing");
 const progress=document.querySelector(".progress");
 
 
+
 function type(){
 
 
@@ -38,7 +39,6 @@ setTimeout(type,60);
 
 
 }
-
 
 else{
 
@@ -63,7 +63,6 @@ type();
 
 }
 
-
 else{
 
 
@@ -74,6 +73,7 @@ load();
 
 
 }
+
 
 
 
@@ -88,7 +88,9 @@ const x=setInterval(()=>{
 
 p++;
 
+
 progress.style.width=p+"%";
+
 
 
 if(p==99){
@@ -96,16 +98,48 @@ if(p==99){
 
 clearInterval(x);
 
+
 typing.innerHTML="تم الاتصال بنجاح";
 
 
+
+setTimeout(()=>{
+
+
+document.getElementById("box").classList.add("shake");
+
+
+
+setTimeout(()=>{
+
+
+document.querySelector(".loader").style.display="none";
+
+typing.style.display="none";
+
+
+document.getElementById("surprise").style.display="block";
+
+
+
+},700);
+
+
+
+},1500);
+
+
+
 }
+
 
 
 },40);
 
 
+
 }
+
 
 
 type();
